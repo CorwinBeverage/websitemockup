@@ -1,0 +1,683 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling from our hamburger menu. */
+ }
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Biorhyme', serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 16px 0 0 0;
+}
+
+.column-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.site-toolbar {
+  height: 85px;
+  background: #00254d;
+  background: url('../images/wire-background.svg'),
+    linear-gradient(#083b73 70%, #041a31);
+
+  /*background: #666;
+  background: linear-gradient(#444, #666);*/
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.site-toolbar .column-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links a {
+  text-indent: -9999px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  margin-left: 5px;
+}
+
+.facebook-link {
+  background: url('../images/facebook-icon-white.svg') center center / 20px 20px no-repeat;
+}
+
+.twitter-link {
+  background: url('../images/twitter-icon-white.svg') center center / 20px 20px no-repeat;
+}
+
+.instagram-link {
+  background: url('../images/instagram-icon-white.svg') center center / 20px 20px no-repeat;
+}
+
+.linked-in-link {
+  background: url('../images/linked-in-icon-white.svg') center center / 20px 20px no-repeat;
+}
+
+.toolbar-phone {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-left: 20px;
+  font-weight: 700;
+}
+
+.site-nav-bar {
+  height: 85px;
+  background: white;
+  position: relative;
+  box-shadow: 0 5px 6px rgba(0,0,0,.15),
+              0 -5px 6px rgba(0,0,0,.15);
+}
+
+a.pricebook-link {
+  font-family: 'Biorhyme', serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  line-height: 85px;
+  padding-left: 60px;
+  padding-right: 25px;
+  background: black url('../images/corwin-icon.svg')25px 20px / 25px auto no-repeat;
+  transition: all .2s;
+  z-index: 1;
+}
+
+a.pricebook-link:before {
+	content: ' ';
+	height: 0;
+	position: absolute;
+	width: 0;
+  border: 42.5px solid transparent;
+  border-left: 26px solid black;
+  left: 100%;
+}
+
+
+a.pricebook-link:hover {
+  color: #bdd431;
+  background-image:  url('../images/corwin-icon-color.svg');
+
+}
+
+
+/* Page Navigation */
+.page-nav
+{
+    position: relative;
+
+    width: 90%;
+    height: 85px;
+    margin: 0 auto;
+    padding: 13px 0;
+
+}
+
+.page-links-wrapper
+{
+    position: absolute;
+    top: 85px;
+    left: 110%;
+
+    width: 100%;
+    padding: 0 25px;
+
+    transition: all .25s;
+
+    background: white;
+}
+
+.page-links-wrapper a
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    display: block;
+
+    padding: 20px 10px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: black;
+    border-top: 1px solid grey;
+}
+
+.page-links-wrapper a:first-child
+{
+    border-top: none;
+}
+
+
+.page-links-wrapper a:hover
+{
+    color: #0068ad;
+}
+
+/* Hamburger Menu */
+/* http://codepen.io/RRoberts/pen/ZBYaJr */
+
+.show-menu-button {
+    position: absolute;
+    top: 6px;
+    right: 55px;
+    padding: 10px;
+}
+.show-menu-button:active {
+    top: 15px;
+}
+.show-menu-button .line {
+    display: block;
+    width: 50px;
+    height: 5px;
+    margin: 8px auto;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: black;
+}
+.show-menu-button.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+.show-menu-button.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
+}
+.show-menu-button.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
+}
+.visible-menu {
+    left: 0;
+    opacity: 100;
+}
+
+/* Homepage hero image */
+
+.home-hero {
+  background: url('../images/corwin-building-small.jpg') center center no-repeat;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.home-hero-logo {
+  width: 400px;
+}
+
+.company-intro {
+  background: url('../images/circle-pattern.svg') center bottom no-repeat,
+              linear-gradient(#444, #000);
+  color: white;
+}
+
+.company-intro .column-wrapper {
+  padding: 50px 0;
+  max-width: 800px;
+}
+
+.video-player {
+  margin-top: 30px;
+}
+
+/* Slider */
+
+.slider-section {
+  background: #00254d;
+  background: url('../images/wire-background.svg'),
+    linear-gradient(#083b73 70%, #041a31);
+  color: white;
+}
+
+.logo-slider-section .column-wrapper {
+  max-width: 800px;
+  position: relative;
+}
+
+.logo-slider-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  background: #083b73;
+  padding: 18px;
+  text-shadow: 4px 4px 3px #052a52;
+}
+
+.home-page-slider > div {
+  display: flex;
+  padding: 0 50px 25px 50px ;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 500px;
+  position: relative;
+}
+
+.slider-section .bx-wrapper {
+  margin-bottom: 0;
+}
+
+.slider-section .bx-wrapper .bx-pager {
+  position: static;
+  padding-bottom: 20px;
+}
+
+.logo-slider > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 50px;
+}
+
+.slider p {
+  margin-top: 10px;
+  max-width: 400px;
+}
+
+.slider-caption {
+}
+
+.slider-image {
+  z-index: -1;
+}
+
+
+.slider-logo {
+}
+
+@media screen and (min-width: 450px) {
+
+  .logo-slider-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+
+  .logo-slider > div {
+    height: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 50px;
+  }
+
+  .slider-logo {
+    width: 33.333%;
+  }
+
+
+}
+
+
+@media screen and (min-width: 990px) {
+
+  .home-page-slider > div {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .slider-caption {
+    position: absolute;
+    left: 50%;
+  }
+
+  .slider-image {
+    position: absolute;
+    right: 50%;
+  }
+
+}
+
+
+
+.kendalls-callout {
+  background: black url('../images/dark_wood.jpg');
+  border-top: 7px solid white;
+  color: white;
+  box-shadow: inset 0 -100px 50px rgba(0,0,0,.7);
+}
+
+.kendalls-callout .column-wrapper {
+  padding: 60px 0 100px 0;
+  max-width: 800px;
+}
+
+.kendalls-callout p {
+  max-width: 400px;
+}
+
+.kendalls-link {
+  font-family: 'Biorhyme', serif;
+  text-align: center;
+  color: #962647;
+  background: white;
+  padding: 20px;
+  display: block;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* The 'after' psuedo element is used for the dotted border */
+.kendalls-link:after {
+  content: ' ';
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 6px;
+  bottom: 6px;
+  border-top: 1px dashed #94334f;
+  border-bottom: 1px dashed #94334f;
+}
+
+.site-footer {
+  background: black;
+  padding: 50px 0;
+}
+
+.footer-logo {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.site-footer .social-links {
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto 25px auto;
+}
+
+.site-footer .social-links a {
+  margin-left: 0;
+  opacity: .7;
+}
+
+.site-footer .facebook-link {
+  background-image: url('../images/facebook-icon-white.svg');
+}
+
+.site-footer .twitter-link {
+  background-image: url('../images/twitter-icon-white.svg');
+}
+
+.site-footer .instagram-link {
+  background-image: url('../images/instagram-icon-white.svg');
+}
+
+.site-footer .linked-in-link {
+  background-image: url('../images/linked-in-icon-white.svg');
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav a {
+  font-size: 14px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Biorhyme', serif;
+  font-weight: 800;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-nav a:hover {
+  color: #bcd432;
+}
+
+.footer-contact {
+  color: white;
+  font-family: 'Biorhyme', serif;
+  font-size: 14px;
+  text-align: center;
+  line-height: 2em;
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.site-copyright {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .2em;
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+}
+
+
+
+@media screen and (min-width: 300px) {
+
+  .site-footer .social-links {
+    width: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+
+
+@media screen and (min-width: 370px) {
+
+  .site-toolbar .column-wrapper {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+}
+
+@media screen and (min-width: 440px) {
+
+  .kendalls-link {
+    box-shadow: 5px 5px 5px black;
+    padding: 25px 0 25px 60px;
+    margin-top: 20px;
+    width: 340px;
+    background: white url('../images/kendalls-icon.svg') 20px center / 30px auto no-repeat;
+  }
+
+  /* The 'before' psuedo element makes the arrow shape */
+  .kendalls-link:before {
+  	content: ' ';
+  	height: 0;
+  	position: absolute;
+  	width: 0;
+    top: 0;
+    border: 34px solid transparent;
+    border-left: 20px solid white;
+    left: 100%;
+  }
+
+  .kendalls-link:after {
+    left: 10px;
+    width: calc(100% - 24px);
+  }
+
+  .kendalls-link:hover {
+    color: #962647;
+    background-image: url('../images/kendalls-icon-hover.svg');
+  }
+
+}
+
+@media screen and (min-width: 500px) {
+
+  .footer-contact {
+    font-size: 16px;
+  }
+
+}
+
+
+@media screen and (min-width: 670px) {
+
+  .kendalls-callout .column-wrapper {
+    padding: 90px 0 140px 0;
+    background: url('../images/kendalls-rough-logo.png') right center / 200px auto no-repeat;
+  }
+
+
+  .footer-nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+  .home-hero {
+    background: #0466d5 url('../images/corwin-building.jpg') center center no-repeat;
+  }
+
+}
+
+
+@media screen and (min-width: 800px) {
+    .kendalls-callout .column-wrapper {
+      background-size: auto;
+  }
+
+}
+
+@media screen and (min-width: 900px)
+{
+
+
+    .page-links-wrapper
+    {
+        position: static;
+
+        display: flex;
+        justify-content: flex-end;
+
+        width: auto;
+        padding: 0;
+
+        opacity: 100;
+        background: none;
+    }
+
+    .page-links-wrapper a
+    {
+        line-height: 60px;
+        line-height: 60px;
+
+        height: 100%;
+        padding: 0 13px;
+
+        border-top: none;
+    }
+
+    .show-menu-button
+    {
+        display: none;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+
+
+  .site-footer .column-wrapper {
+    position: relative;
+    height: 140px;
+  }
+
+  .footer-logo {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+  }
+
+  .site-footer .social-links {
+    position: absolute;
+    right: 10px;
+    bottom: 60px;
+  }
+
+  .footer-nav {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+  }
+
+  .footer-contact {
+    padding-top: 40px;
+    text-transform: uppercase;
+  }
+
+  .footer-contact br {
+    display: none;
+  }
+
+  .footer-contact-name {
+    padding-right: 25px;
+  }
+
+  .footer-contact-number {
+    padding: 0 25px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+  }
+
+  .footer-contact-address {
+    padding-left: 25px;
+  }
+
+
+}
