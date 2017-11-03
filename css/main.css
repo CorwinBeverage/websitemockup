@@ -466,14 +466,14 @@ a.pricebook-link:hover {
 }
 
 .footer-nav a {
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: .05em;
   text-transform: uppercase;
   color: white;
   font-family: 'Biorhyme', serif;
   font-weight: 800;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .footer-nav a:hover {
@@ -595,6 +595,12 @@ a.pricebook-link:hover {
     .kendalls-callout .column-wrapper {
       background-size: auto;
   }
+
+    .footer-nav a {
+      font-size: 14px;
+      padding: 20px;
+    }
+
 
 }
 
