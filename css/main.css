@@ -64,6 +64,7 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0; /* Fix positioning issue for IE 11 */
 }
 
 .social-links {
@@ -123,7 +124,7 @@ a.pricebook-link {
   line-height: 85px;
   padding-left: 60px;
   padding-right: 25px;
-  background: black url('../images/corwin-icon.svg')25px 20px / 25px auto no-repeat;
+  background: black url('../images/corwin-icon.svg')25px 20px / 25px 36px no-repeat; /* Set an explicit height and width for the backgruond for IE11 to size correctly ('Auto' wouln't work for height) */
   transition: all .2s;
   z-index: 1;
 }
@@ -255,6 +256,7 @@ a.pricebook-link:hover {
 
 .home-hero-logo {
   width: 400px;
+  height: 460px /* Needed to set an explicit height for IE11 or else it would distort the image */
 }
 
 .company-intro {
@@ -369,15 +371,6 @@ a.pricebook-link:hover {
     justify-content: center;
   }
 
-  .slider-caption {
-    position: absolute;
-    left: 50%;
-  }
-
-  .slider-image {
-    position: absolute;
-    right: 50%;
-  }
 
 }
 
@@ -429,7 +422,8 @@ a.pricebook-link:hover {
 
 .footer-logo {
   display: block;
-  max-width: 200px;
+  width: 200px; /* Set an explicit width and height. Otherwise IE11 will not size the image correctly */
+  height: 91px;
   margin: 0 auto;
 }
 
@@ -532,7 +526,7 @@ a.pricebook-link:hover {
     padding: 25px 0 25px 60px;
     margin-top: 20px;
     width: 340px;
-    background: white url('../images/kendalls-icon.svg') 20px center / 30px auto no-repeat;
+    background: white url('../images/kendalls-icon.svg') 20px center / 30px 30px no-repeat;
   }
 
   /* The 'before' psuedo element makes the arrow shape */
